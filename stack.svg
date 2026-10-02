@@ -1,0 +1,195 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 460" width="100%" height="100%">
+  <defs>
+    <style>
+      @import url('https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&amp;family=JetBrains+Mono:wght@400;500;600;700&amp;display=swap');
+      * { box-sizing: border-box; }
+      .font-sans { font-family: 'Plus Jakarta Sans', sans-serif; }
+      .font-mono { font-family: 'JetBrains Mono', monospace; }
+      @keyframes orbit-spin { from { transform: rotate(0deg); } to { transform: rotate(360deg); } }
+      @keyframes orbit-spin-rev { from { transform: rotate(360deg); } to { transform: rotate(0deg); } }
+      @keyframes core-pulse {
+        0%, 100% { transform: scale(1); filter: drop-shadow(0 0 16px rgba(56, 189, 248, 0.6)); }
+        50% { transform: scale(1.08); filter: drop-shadow(0 0 28px rgba(37, 99, 235, 0.9)); }
+      }
+      .orbit-path-1 { animation: orbit-spin 24s linear infinite; transform-origin: 450px 125px; }
+      .orbit-path-2 { animation: orbit-spin-rev 32s linear infinite; transform-origin: 450px 125px; }
+      .orbit-path-3 { animation: orbit-spin 40s linear infinite; transform-origin: 450px 125px; }
+      .moon-orbit { animation: orbit-spin 6s linear infinite; transform-origin: 0px 0px; }
+      .atom-center { animation: core-pulse 4s ease-in-out infinite; transform-origin: 450px 125px; }
+    </style>
+
+    <linearGradient id="suit-stack-border" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#ffffff" stop-opacity="0.8" />
+      <stop offset="40%" stop-color="#38bdf8" stop-opacity="0.8" />
+      <stop offset="80%" stop-color="#1d4ed8" stop-opacity="0.6" />
+      <stop offset="100%" stop-color="#c49d63" stop-opacity="0.5" />
+    </linearGradient>
+
+    <linearGradient id="suit-stack-bg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#141822" />
+      <stop offset="45%" stop-color="#0f131b" />
+      <stop offset="100%" stop-color="#0a0d13" />
+    </linearGradient>
+
+    <radialGradient id="stack-core-glow" cx="50%" cy="50%" r="50%">
+      <stop offset="0%" stop-color="#38bdf8" stop-opacity="0.3" />
+      <stop offset="50%" stop-color="#1d4ed8" stop-opacity="0.15" />
+      <stop offset="100%" stop-color="#000000" stop-opacity="0" />
+    </radialGradient>
+
+    <pattern id="stack-dots" width="24" height="24" patternUnits="userSpaceOnUse">
+      <circle cx="2" cy="2" r="0.9" fill="#ffffff" fill-opacity="0.04" />
+    </pattern>
+  </defs>
+
+  <rect x="2" y="2" width="896" height="456" rx="20" fill="url(#suit-stack-bg)" stroke="url(#suit-stack-border)" stroke-width="1.6" />
+  <rect x="2" y="2" width="896" height="456" rx="20" fill="url(#stack-dots)" />
+
+  <g transform="translate(36, 32)">
+    <text x="0" y="0" class="font-mono" font-size="11" font-weight="700" fill="#38bdf8" letter-spacing="1.5">// TECH ORBIT &amp; CAPABILITIES</text>
+    <text x="0" y="22" class="font-sans" font-size="19" font-weight="800" fill="#ffffff" letter-spacing="-0.3">Interactive Planetary Tech Stack</text>
+  </g>
+
+  <g transform="translate(710, 32)">
+    <rect x="0" y="-14" width="154" height="24" rx="12" fill="#070a10" stroke="#38bdf8" stroke-width="1" />
+    <circle cx="14" cy="-2" r="3.5" fill="#38bdf8" />
+    <text x="26" y="2" class="font-mono" font-size="9.5" font-weight="600" fill="#ffffff">ATOMIC ORBITS</text>
+  </g>
+
+  <!-- Orbits -->
+  <g transform="translate(0, 5)">
+    <circle cx="450" cy="125" r="110" fill="url(#stack-core-glow)" />
+
+    <ellipse cx="450" cy="125" rx="160" ry="58" fill="none" stroke="#38bdf8" stroke-opacity="0.25" stroke-width="1.2" stroke-dasharray="4,4" transform="rotate(-12 450 125)" />
+    <ellipse cx="450" cy="125" rx="240" ry="68" fill="none" stroke="#ffffff" stroke-opacity="0.2" stroke-width="1.2" stroke-dasharray="5,4" transform="rotate(16 450 125)" />
+    <ellipse cx="450" cy="125" rx="330" ry="82" fill="none" stroke="#c49d63" stroke-opacity="0.2" stroke-width="1.2" stroke-dasharray="6,4" transform="rotate(-22 450 125)" />
+
+    <g class="orbit-path-1">
+      <g transform="translate(605, 120)">
+        <rect x="-16" y="-16" width="32" height="32" rx="8" fill="#070a10" stroke="#38bdf8" stroke-width="1.2" />
+        <text x="0" y="4" class="font-mono" font-size="11" font-weight="700" fill="#38bdf8" text-anchor="middle">TS</text>
+      </g>
+      <g transform="translate(370, 75)">
+        <rect x="-16" y="-16" width="32" height="32" rx="8" fill="#070a10" stroke="#ffffff" stroke-width="1.2" />
+        <text x="0" y="4" class="font-mono" font-size="9" font-weight="700" fill="#ffffff" text-anchor="middle">NODE</text>
+      </g>
+      <g transform="translate(370, 175)">
+        <rect x="-16" y="-16" width="32" height="32" rx="8" fill="#070a10" stroke="#38bdf8" stroke-width="1.2" />
+        <text x="0" y="4" class="font-mono" font-size="9" font-weight="700" fill="#38bdf8" text-anchor="middle">API</text>
+      </g>
+    </g>
+
+    <g class="orbit-path-2">
+      <g transform="translate(685, 125)">
+        <rect x="-18" y="-18" width="36" height="36" rx="8" fill="#070a10" stroke="#c49d63" stroke-width="1.2" />
+        <text x="0" y="5" class="font-mono" font-size="11" font-weight="700" fill="#fde68a" text-anchor="middle">PY</text>
+      </g>
+      <g transform="translate(215, 125)">
+        <rect x="-18" y="-18" width="36" height="36" rx="8" fill="#070a10" stroke="#ffffff" stroke-width="1.2" />
+        <text x="0" y="4" class="font-mono" font-size="9.5" font-weight="700" fill="#ffffff" text-anchor="middle">SQL</text>
+      </g>
+      <g transform="translate(450, 58)">
+        <rect x="-16" y="-16" width="32" height="32" rx="8" fill="#070a10" stroke="#38bdf8" stroke-width="1.2" />
+        <polygon points="0,-8 7,6 -7,6" fill="#38bdf8" />
+      </g>
+    </g>
+
+    <g class="orbit-path-3">
+      <g transform="translate(775, 125)">
+        <rect x="-20" y="-18" width="40" height="36" rx="8" fill="#070a10" stroke="#38bdf8" stroke-width="1.2" />
+        <text x="0" y="4" class="font-mono" font-size="9" font-weight="700" fill="#38bdf8" text-anchor="middle">KALI</text>
+      </g>
+      <g transform="translate(125, 125)">
+        <rect x="-20" y="-18" width="40" height="36" rx="8" fill="#070a10" stroke="#ffffff" stroke-width="1.2" />
+        <text x="0" y="4" class="font-mono" font-size="9" font-weight="700" fill="#ffffff" text-anchor="middle">NMAP</text>
+      </g>
+      <g transform="translate(450, 42)">
+        <rect x="-16" y="-16" width="32" height="32" rx="8" fill="#070a10" stroke="#c49d63" stroke-width="1.2" />
+        <text x="0" y="4" class="font-mono" font-size="9.5" font-weight="700" fill="#fde68a" text-anchor="middle">GIT</text>
+      </g>
+      <g transform="translate(450, 208)">
+        <rect x="-16" y="-16" width="32" height="32" rx="8" fill="#070a10" stroke="#ffffff" stroke-width="1.2" />
+        <text x="0" y="4" class="font-mono" font-size="8.5" font-weight="700" fill="#ffffff" text-anchor="middle">STUDIO</text>
+      </g>
+    </g>
+
+    <g class="atom-center" transform="translate(450, 125)">
+      <circle cx="0" cy="0" r="32" fill="#070a10" stroke="#38bdf8" stroke-width="2" />
+      <ellipse cx="0" cy="0" rx="26" ry="10" fill="none" stroke="#38bdf8" stroke-width="1.5" transform="rotate(30)" />
+      <ellipse cx="0" cy="0" rx="26" ry="10" fill="none" stroke="#38bdf8" stroke-width="1.5" transform="rotate(90)" />
+      <ellipse cx="0" cy="0" rx="26" ry="10" fill="none" stroke="#38bdf8" stroke-width="1.5" transform="rotate(150)" />
+      <circle cx="0" cy="0" r="8" fill="#c49d63" />
+      <text x="0" y="2.5" class="font-mono" font-size="7" font-weight="800" fill="#000000" text-anchor="middle">JS</text>
+
+      <g class="moon-orbit">
+        <g transform="translate(42, 0)">
+          <circle cx="0" cy="0" r="7" fill="#070a10" stroke="#ffffff" stroke-width="1" />
+          <text x="0" y="2.5" class="font-mono" font-size="6" font-weight="700" fill="#ffffff" text-anchor="middle">H5</text>
+        </g>
+        <g transform="translate(-42, 0)">
+          <circle cx="0" cy="0" r="7" fill="#070a10" stroke="#38bdf8" stroke-width="1" />
+          <text x="0" y="2.5" class="font-mono" font-size="6" font-weight="700" fill="#38bdf8" text-anchor="middle">CS</text>
+        </g>
+      </g>
+    </g>
+  </g>
+
+  <!-- Chips -->
+  <g transform="translate(36, 246)">
+    <g transform="translate(0, 0)">
+      <text x="0" y="14" class="font-mono" font-size="10" font-weight="700" fill="#38bdf8" letter-spacing="1">FRONTEND</text>
+      <g transform="translate(0, 24)">
+        <rect x="0" y="0" width="76" height="26" rx="7" fill="#070a10" stroke="#38bdf8" stroke-width="1" />
+        <text x="38" y="17" class="font-sans" font-size="11" font-weight="700" fill="#ffffff" text-anchor="middle">⚛️ React</text>
+        <rect x="84" y="0" width="102" height="26" rx="7" fill="#070a10" stroke="#c49d63" stroke-width="1" />
+        <text x="135" y="17" class="font-sans" font-size="11" font-weight="700" fill="#fde68a" text-anchor="middle">⚡ JavaScript</text>
+        <rect x="194" y="0" width="104" height="26" rx="7" fill="#070a10" stroke="#ffffff" stroke-width="1" />
+        <text x="246" y="17" class="font-sans" font-size="11" font-weight="700" fill="#ffffff" text-anchor="middle">📘 TypeScript</text>
+        <rect x="306" y="0" width="76" height="26" rx="7" fill="#070a10" stroke="#38bdf8" stroke-width="1" />
+        <text x="344" y="17" class="font-sans" font-size="11" font-weight="700" fill="#ffffff" text-anchor="middle">🌐 HTML5</text>
+        <rect x="390" y="0" width="72" height="26" rx="7" fill="#070a10" stroke="#ffffff" stroke-width="1" />
+        <text x="426" y="17" class="font-sans" font-size="11" font-weight="700" fill="#ffffff" text-anchor="middle">🎨 CSS3</text>
+      </g>
+    </g>
+
+    <g transform="translate(488, 0)">
+      <text x="0" y="14" class="font-mono" font-size="10" font-weight="700" fill="#ffffff" letter-spacing="1">BACKEND &amp; CLOUD</text>
+      <g transform="translate(0, 24)">
+        <rect x="0" y="0" width="82" height="26" rx="7" fill="#070a10" stroke="#38bdf8" stroke-width="1" />
+        <text x="41" y="17" class="font-sans" font-size="11" font-weight="700" fill="#ffffff" text-anchor="middle">🟢 Node.js</text>
+        <rect x="90" y="0" width="82" height="26" rx="7" fill="#070a10" stroke="#38bdf8" stroke-width="1" />
+        <text x="131" y="17" class="font-sans" font-size="11" font-weight="700" fill="#ffffff" text-anchor="middle">⚡ FastAPI</text>
+        <rect x="180" y="0" width="80" height="26" rx="7" fill="#070a10" stroke="#c49d63" stroke-width="1" />
+        <text x="220" y="17" class="font-sans" font-size="11" font-weight="700" fill="#fde68a" text-anchor="middle">🐍 Python</text>
+        <rect x="268" y="0" width="62" height="26" rx="7" fill="#070a10" stroke="#ffffff" stroke-width="1" />
+        <text x="299" y="17" class="font-sans" font-size="11" font-weight="700" fill="#ffffff" text-anchor="middle">🗄️ SQL</text>
+      </g>
+    </g>
+
+    <g transform="translate(0, 84)">
+      <text x="0" y="14" class="font-mono" font-size="10" font-weight="700" fill="#c49d63" letter-spacing="1">AI &amp; MACHINE LEARNING</text>
+      <g transform="translate(0, 24)">
+        <rect x="0" y="0" width="84" height="26" rx="7" fill="#070a10" stroke="#c49d63" stroke-width="1" />
+        <text x="42" y="17" class="font-sans" font-size="11" font-weight="700" fill="#fde68a" text-anchor="middle">🐍 Python</text>
+        <rect x="92" y="0" width="144" height="26" rx="7" fill="#070a10" stroke="#38bdf8" stroke-width="1" />
+        <text x="164" y="17" class="font-sans" font-size="11" font-weight="700" fill="#ffffff" text-anchor="middle">🧠 Machine Learning</text>
+        <rect x="244" y="0" width="108" height="26" rx="7" fill="#070a10" stroke="#ffffff" stroke-width="1" />
+        <text x="298" y="17" class="font-sans" font-size="11" font-weight="700" fill="#ffffff" text-anchor="middle">📊 Data Models</text>
+      </g>
+    </g>
+
+    <g transform="translate(410, 84)">
+      <text x="0" y="14" class="font-mono" font-size="10" font-weight="700" fill="#38bdf8" letter-spacing="1">CYBERSECURITY &amp; TOOLS</text>
+      <g transform="translate(0, 24)">
+        <rect x="0" y="0" width="98" height="26" rx="7" fill="#070a10" stroke="#38bdf8" stroke-width="1" />
+        <text x="49" y="17" class="font-sans" font-size="11" font-weight="700" fill="#ffffff" text-anchor="middle">🐉 Kali Linux</text>
+        <rect x="106" y="0" width="76" height="26" rx="7" fill="#070a10" stroke="#ffffff" stroke-width="1" />
+        <text x="144" y="17" class="font-sans" font-size="11" font-weight="700" fill="#ffffff" text-anchor="middle">📡 Nmap</text>
+        <rect x="190" y="0" width="118" height="26" rx="7" fill="#070a10" stroke="#38bdf8" stroke-width="1" />
+        <text x="249" y="17" class="font-sans" font-size="11" font-weight="700" fill="#ffffff" text-anchor="middle">🛡️ Recon Basics</text>
+        <rect x="316" y="0" width="58" height="26" rx="7" fill="#070a10" stroke="#c49d63" stroke-width="1" />
+        <text x="345" y="17" class="font-sans" font-size="11" font-weight="700" fill="#fde68a" text-anchor="middle">🐙 Git</text>
+      </g>
+    </g>
+  </g>
+</svg>
