@@ -120,7 +120,10 @@
 
       <g transform="translate(68, 156)">
         <rect x="0" y="0" width="172" height="26" rx="6" fill="#0E1D61" stroke="rgba(232,224,210,0.14)" stroke-width="1" />
-        <text x="10" y="17" font-size="12">🛡️</text>
+        <g transform="translate(14, 13)">
+          <path d="M 0 -6 L 5.5 -3 L 5.5 1 C 5.5 4.5 0 7.5 0 7.5 C 0 7.5 -5.5 4.5 -5.5 1 L -5.5 -3 Z" fill="#162A7E" stroke="#B89A5A" stroke-width="1.1" />
+          <path d="M -2 0 L -0.5 1.5 L 2.5 -1.5" fill="none" stroke="#E8E0D2" stroke-width="1.1" stroke-linecap="round" stroke-linejoin="round" />
+        </g>
         <text x="28" y="17" class="font-mono" font-size="8" font-weight="700" fill="#E8E0D2">SECURE VERIFIED IDENTITY</text>
       </g>
 

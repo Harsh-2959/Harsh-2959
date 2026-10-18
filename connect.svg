@@ -48,12 +48,12 @@
       <polygon points="0,-6 2,-2 6,0 2,2 0,6 -2,2 -6,0 -2,-2" fill="#B89A5A" />
     </g>
     <g class="sparkle" transform="translate(360, 96)">
-      <text font-size="12">✨</text>
+      <polygon points="0,-6 2,-2 6,0 2,2 0,6 -2,2 -6,0 -2,-2" fill="#B89A5A" />
     </g>
 
     <g transform="translate(180, 114)">
       <rect x="0" y="0" width="180" height="24" rx="8" fill="#162A7E" stroke="rgba(232,224,210,0.14)" stroke-width="1" />
-      <text x="90" y="16" class="font-mono" font-size="9.5" font-weight="700" fill="#B89A5A" text-anchor="middle">LET'S CONNECT ⚡</text>
+      <text x="90" y="16" class="font-mono" font-size="9.5" font-weight="700" fill="#B89A5A" text-anchor="middle" letter-spacing="1">LET'S CONNECT</text>
     </g>
   </g>
 
@@ -102,7 +102,9 @@
       <rect x="0" y="0" width="4" height="52" rx="2" fill="#B89A5A" />
       <g transform="translate(18, 14)">
         <rect x="0" y="0" width="24" height="24" rx="5" fill="#0E1D61" />
-        <text x="12" y="17" font-size="14" text-anchor="middle">🎓</text>
+        <g transform="translate(12, 12)">
+          <path d="M 0 -4 L -7 -0.5 L 0 3 L 7 -0.5 Z M -4.5 1.5 L -4.5 4.5 C -4.5 6 0 7.5 0 7.5 C 0 7.5 4.5 6 4.5 4.5 L 4.5 1.5 L 0 3.5 Z" fill="#B89A5A" />
+        </g>
       </g>
       <text x="56" y="24" class="font-sans" font-size="13" font-weight="700" fill="#E8E0D2">Viva Institute of Technology</text>
       <text x="56" y="40" class="font-mono" font-size="10.5" fill="rgba(232,224,210,0.7)">Open to Collaborations &amp; Projects</text>

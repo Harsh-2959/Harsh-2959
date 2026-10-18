@@ -64,7 +64,7 @@
 
   <g transform="translate(450, 40)" text-anchor="middle">
     <rect x="-120" y="-16" width="240" height="24" rx="12" fill="#070a10" stroke="#38bdf8" stroke-opacity="0.5" stroke-width="1.2" />
-    <text x="0" y="0" class="font-mono" font-size="10.5" font-weight="700" fill="#38bdf8" letter-spacing="1.5">🎮 GAMING // AVATARS</text>
+    <text x="0" y="0" class="font-mono" font-size="10.5" font-weight="700" fill="#38bdf8" letter-spacing="1.5">GAMING // AVATARS</text>
     <text x="0" y="32" class="font-serif" font-size="22" font-weight="800" fill="#ffffff" letter-spacing="-0.3">Beyond the Code</text>
     <text x="0" y="52" class="font-sans" font-size="12.5" font-weight="500" fill="#cbd5e1">My in-game avatars: the Queen &amp; the Antler Companion</text>
   </g>
@@ -121,14 +121,14 @@
 
     <g transform="translate(68, 256)">
       <rect x="0" y="0" width="204" height="26" rx="13" fill="#070a10" stroke="#c49d63" stroke-width="1.2" />
-      <text x="102" y="17" class="font-mono" font-size="10" font-weight="700" fill="#fde68a" text-anchor="middle" letter-spacing="1">👑 THE QUEEN // ARCHITECT</text>
+      <text x="102" y="17" class="font-mono" font-size="10" font-weight="700" fill="#fde68a" text-anchor="middle" letter-spacing="1">THE QUEEN // ARCHITECT</text>
     </g>
   </g>
 
   <!-- Center Crest -->
   <g transform="translate(450, 160)" text-anchor="middle">
     <circle cx="0" cy="20" r="28" fill="#070a10" stroke="#38bdf8" stroke-opacity="0.5" stroke-width="1.5" />
-    <text x="0" y="27" font-size="20">✨</text>
+    <polygon points="0,7 4,16 13,20 4,24 0,33 -4,24 -13,20 -4,16" fill="#38bdf8" />
     <line x1="0" y1="-30" x2="0" y2="-12" stroke="#38bdf8" stroke-opacity="0.3" stroke-width="1" stroke-dasharray="3,2" />
     <line x1="0" y1="52" x2="0" y2="76" stroke="#38bdf8" stroke-opacity="0.3" stroke-width="1" stroke-dasharray="3,2" />
     <text x="0" y="94" class="font-mono" font-size="9" font-weight="600" fill="#cbd5e1" letter-spacing="2">DUAL GUARDIANS</text>
@@ -157,7 +157,7 @@
 
     <g transform="translate(68, 256)">
       <rect x="0" y="0" width="204" height="26" rx="13" fill="#070a10" stroke="#38bdf8" stroke-width="1.2" />
-      <text x="102" y="17" class="font-mono" font-size="10" font-weight="700" fill="#38bdf8" text-anchor="middle" letter-spacing="1">🦌 ANTLER GIRL &amp; KITTEN</text>
+      <text x="102" y="17" class="font-mono" font-size="10" font-weight="700" fill="#38bdf8" text-anchor="middle" letter-spacing="1">ANTLER GIRL &amp; KITTEN</text>
     </g>
   </g>
 
