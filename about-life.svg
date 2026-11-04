@@ -3,7 +3,7 @@
     <style>
       @import url('https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&amp;family=JetBrains+Mono:wght@400;500;600;700&amp;display=swap');
       * { box-sizing: border-box; }
-      .font-sans { font-family: 'Plus Jakarta Sans', sans-serif; }
+      .font-sans { font-family: 'Plus Jakarta Sans', -apple-system, sans-serif; }
       .font-mono { font-family: 'JetBrains Mono', monospace; }
       @keyframes blink-cursor { 0%, 100% { opacity: 1; } 50% { opacity: 0; } }
       .cursor-blink { animation: blink-cursor 1s infinite; }
@@ -12,55 +12,67 @@
       .ring-anim-2 { animation: ring-dash 8s ease-in-out infinite 0.5s; }
       .ring-anim-3 { animation: ring-dash 8s ease-in-out infinite 1s; }
     </style>
+    <linearGradient id="ring-blue" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#38BDF8" />
+      <stop offset="100%" stop-color="rgba(56, 189, 248, 0.45)" />
+    </linearGradient>
+    <linearGradient id="ring-sapphire" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#7F95FF" />
+      <stop offset="100%" stop-color="rgba(127, 149, 255, 0.45)" />
+    </linearGradient>
     <linearGradient id="ring-ivory" x1="0%" y1="0%" x2="100%" y2="100%">
       <stop offset="0%" stop-color="#E8E0D2" />
-      <stop offset="100%" stop-color="rgba(232,224,210,0.6)" />
+      <stop offset="100%" stop-color="rgba(232, 224, 210, 0.45)" />
     </linearGradient>
-    <linearGradient id="ring-gold" x1="0%" y1="0%" x2="100%" y2="100%">
-      <stop offset="0%" stop-color="#D4AF37" />
-      <stop offset="100%" stop-color="#B89A5A" />
-    </linearGradient>
-    <linearGradient id="ring-ivory-muted" x1="0%" y1="0%" x2="100%" y2="100%">
-      <stop offset="0%" stop-color="rgba(232,224,210,0.8)" />
-      <stop offset="100%" stop-color="rgba(232,224,210,0.4)" />
-    </linearGradient>
-    <pattern id="about-navy-weave" width="20" height="20" patternUnits="userSpaceOnUse">
-      <circle cx="2" cy="2" r="0.9" fill="#E8E0D2" fill-opacity="0.04" />
+    <pattern id="about-grid" width="24" height="24" patternUnits="userSpaceOnUse">
+      <path d="M 24 0 L 0 0 0 24" fill="none" stroke="rgba(56, 189, 248, 0.04)" stroke-width="1"/>
     </pattern>
+    <linearGradient id="about-trace" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0%" stop-color="#38BDF8" stop-opacity="0"/>
+      <stop offset="50%" stop-color="#38BDF8" stop-opacity="0.9"/>
+      <stop offset="100%" stop-color="#7F95FF" stop-opacity="0"/>
+    </linearGradient>
   </defs>
 
-  <!-- Solid Deep Atlas Navy Rounded Card Base (Light & Dark Theme Safe) -->
-  <rect x="0" y="0" width="900" height="410" rx="20" fill="#0E1D61" stroke="rgba(232,224,210,0.14)" stroke-width="1.2" />
+  <!-- Deep Ink Navy Card Base -->
+  <rect x="0" y="0" width="900" height="410" rx="20" fill="#02040F" stroke="#112454" stroke-width="1.2" />
+  <rect x="0" y="0" width="900" height="410" rx="20" fill="url(#about-grid)" />
+
+  <!-- Animated Perimeter Trace Beam -->
+  <rect x="1" y="1" width="898" height="408" rx="19" fill="none"
+        stroke="url(#about-trace)" stroke-width="2.2"
+        stroke-dasharray="480 2140" stroke-dashoffset="0">
+    <animate attributeName="stroke-dashoffset" values="2620;0" dur="12s" repeatCount="indefinite" />
+  </rect>
 
   <!-- Left Card: Developer Browser -->
-  <g transform="translate(10, 10)">
-    <rect x="0" y="0" width="432" height="390" rx="16" fill="#162A7E" stroke="rgba(232,224,210,0.14)" stroke-width="1.2" />
-    <rect x="0" y="0" width="432" height="390" rx="16" fill="url(#about-navy-weave)" />
-    <text x="24" y="32" class="font-mono" font-size="11" font-weight="700" fill="#B89A5A" letter-spacing="1.5">// DEVELOPMENT</text>
+  <g transform="translate(12, 12)">
+    <rect x="0" y="0" width="430" height="386" rx="16" fill="#07122E" stroke="#112454" stroke-width="1.2" />
+    <text x="24" y="32" class="font-mono" font-size="11" font-weight="700" fill="#38BDF8" letter-spacing="1.5">// DEVELOPMENT</text>
     <text x="24" y="56" class="font-sans" font-size="20" font-weight="800" fill="#E8E0D2" letter-spacing="-0.3">Interfaces &amp; Systems</text>
 
-    <!-- Browser: Deep Navy Panel -->
+    <!-- Browser: Deep Ink Panel -->
     <g transform="translate(24, 72)">
-      <rect x="0" y="0" width="384" height="154" rx="12" fill="#0E1D61" stroke="rgba(232,224,210,0.14)" stroke-width="1.2" />
-      <rect x="0" y="0" width="384" height="28" rx="12" fill="#162A7E" />
-      <rect x="0" y="24" width="384" height="4" fill="#162A7E" />
-      <circle cx="14" cy="14" r="4" fill="#B89A5A" />
-      <circle cx="26" cy="14" r="4" fill="rgba(232,224,210,0.4)" />
+      <rect x="0" y="0" width="382" height="154" rx="12" fill="#02040F" stroke="#112454" stroke-width="1" />
+      <rect x="0" y="0" width="382" height="28" rx="12" fill="#0B1B44" />
+      <rect x="0" y="24" width="382" height="4" fill="#0B1B44" />
+      <circle cx="14" cy="14" r="4" fill="#38BDF8" />
+      <circle cx="26" cy="14" r="4" fill="rgba(232, 224, 210, 0.35)" />
       <circle cx="38" cy="14" r="4" fill="#E8E0D2" />
-      <rect x="52" y="5" width="260" height="18" rx="6" fill="#0E1D61" stroke="rgba(232,224,210,0.14)" stroke-width="0.8" />
-      <text x="64" y="18" class="font-mono" font-size="9" fill="rgba(232,224,210,0.7)">localhost:3000/harsh/capabilities</text>
-      <rect x="238" y="9" width="1.5" height="10" fill="#B89A5A" class="cursor-blink" />
+      <rect x="52" y="5" width="258" height="18" rx="6" fill="#02040F" stroke="#112454" stroke-width="0.8" />
+      <text x="64" y="18" class="font-mono" font-size="9" fill="rgba(232, 224, 210, 0.7)">localhost:3000/harsh/capabilities</text>
+      <rect x="238" y="9" width="1.5" height="10" fill="#38BDF8" class="cursor-blink" />
 
       <!-- Terminal Code -->
       <g transform="translate(18, 46)">
         <text x="0" y="14" class="font-mono" font-size="11" fill="#E8E0D2">
           const engineer = {
         </text>
-        <text x="14" y="34" class="font-mono" font-size="11" fill="rgba(232,224,210,0.7)">
-          role: <tspan fill="#B89A5A">'Full-Stack &amp; Security'</tspan>,
+        <text x="14" y="34" class="font-mono" font-size="11" fill="rgba(232, 224, 210, 0.7)">
+          role: <tspan fill="#38BDF8">'Full-Stack &amp; Security'</tspan>,
         </text>
-        <text x="14" y="54" class="font-mono" font-size="11" fill="rgba(232,224,210,0.7)">
-          status: <tspan fill="#E8E0D2">'Building &amp; Exploring'</tspan>
+        <text x="14" y="54" class="font-mono" font-size="11" fill="rgba(232, 224, 210, 0.7)">
+          status: <tspan fill="#7F95FF">'Building &amp; Exploring'</tspan>
         </text>
         <text x="0" y="74" class="font-mono" font-size="11" fill="#E8E0D2">
           };
@@ -85,126 +97,132 @@
     </g>
 
     <g transform="translate(24, 345)">
-      <rect x="0" y="0" width="144" height="24" rx="8" fill="#0E1D61" stroke="rgba(232,224,210,0.14)" stroke-width="1" />
-      <circle cx="12" cy="12" r="3" fill="#B89A5A" />
+      <rect x="0" y="0" width="144" height="24" rx="8" fill="#02040F" stroke="#112454" stroke-width="1" />
+      <circle cx="12" cy="12" r="3" fill="#38BDF8" />
       <text x="20" y="16" class="font-mono" font-size="9.5" font-weight="700" fill="#E8E0D2">FULL-STACK CRAFT</text>
     </g>
   </g>
 
   <!-- Right Card: Beyond the Screen -->
-  <g transform="translate(458, 10)">
-    <rect x="0" y="0" width="432" height="390" rx="16" fill="#162A7E" stroke="rgba(232,224,210,0.14)" stroke-width="1.2" />
-    <rect x="0" y="0" width="432" height="390" rx="16" fill="url(#about-navy-weave)" />
-    <text x="24" y="32" class="font-mono" font-size="11" font-weight="700" fill="#B89A5A" letter-spacing="1.5">// INTERESTS &amp; FOCUS</text>
+  <g transform="translate(458, 12)">
+    <rect x="0" y="0" width="430" height="386" rx="16" fill="#07122E" stroke="#112454" stroke-width="1.2" />
+    <text x="24" y="32" class="font-mono" font-size="11" font-weight="700" fill="#38BDF8" letter-spacing="1.5">// INTERESTS &amp; FOCUS</text>
     <text x="24" y="56" class="font-sans" font-size="20" font-weight="800" fill="#E8E0D2" letter-spacing="-0.3">Beyond the Screen</text>
 
     <!-- Cycling Carousel Cards -->
     <g transform="translate(24, 76)">
+      <!-- 1. Cinematic Gaming -->
       <g>
-        <rect x="0" y="0" width="384" height="84" rx="12" fill="#0E1D61" stroke="rgba(232,224,210,0.14)" stroke-width="1" />
+        <rect x="0" y="0" width="382" height="84" rx="12" fill="#02040F" stroke="#112454" stroke-width="1" />
         <g transform="translate(18, 22)">
-          <path d="M 0 0 C -2 0 -3 2 -2 5 L -1 9 C -0.5 10 1 10 2 9 L 4 7 L 10 7 L 12 9 C 13 10 14.5 10 15 9 L 16 5 C 17 2 16 0 14 0 Z M 2 3 L 4 3 M 3 2 L 3 4 M 11 3 A 0.8 0.8 0 1 1 11 2 A 0.8 0.8 0 1 1 11 3 M 13 5 A 0.8 0.8 0 1 1 13 4 A 0.8 0.8 0 1 1 13 5" stroke="#B89A5A" fill="none" stroke-width="1.2" transform="scale(0.85) translate(0, -3)"/>
+          <path d="M 0 0 C -2 0 -3 2 -2 5 L -1 9 C -0.5 10 1 10 2 9 L 4 7 L 10 7 L 12 9 C 13 10 14.5 10 15 9 L 16 5 C 17 2 16 0 14 0 Z M 2 3 L 4 3 M 3 2 L 3 4 M 11 3 A 0.8 0.8 0 1 1 11 2 A 0.8 0.8 0 1 1 11 3 M 13 5 A 0.8 0.8 0 1 1 13 4 A 0.8 0.8 0 1 1 13 5" stroke="#38BDF8" fill="none" stroke-width="1.2" transform="scale(0.85) translate(0, -3)"/>
           <text x="20" y="8" class="font-sans" font-size="14" font-weight="700" fill="#E8E0D2">Cinematic Gaming</text>
         </g>
-        <text x="18" y="54" class="font-sans" font-size="11.5" fill="rgba(232,224,210,0.7)">Immersion, Narrative Design &amp; Lore Architecture</text>
-        <circle cx="360" cy="42" r="14" fill="#162A7E" />
-        <path d="M 353 45 L 351 38 L 356 41 L 360 36 L 364 41 L 369 38 L 367 45 Z" fill="#B89A5A" />
+        <text x="18" y="54" class="font-sans" font-size="11.5" fill="rgba(232, 224, 210, 0.7)">Immersion, Narrative Design &amp; Lore Architecture</text>
+        <circle cx="358" cy="42" r="14" fill="#07122E" stroke="#112454" stroke-width="1" />
+        <path d="M 351 45 L 349 38 L 354 41 L 358 36 L 362 41 L 367 38 L 365 45 Z" fill="#38BDF8" />
         <animate attributeName="opacity" dur="12s" repeatCount="indefinite" values="1;1;0;0;0;0;0;0" keyTimes="0;0.22;0.25;0.97;0.98;1;1;1" />
       </g>
+
+      <!-- 2. Security Recon -->
       <g>
-        <rect x="0" y="0" width="384" height="84" rx="12" fill="#0E1D61" stroke="rgba(232,224,210,0.14)" stroke-width="1" />
+        <rect x="0" y="0" width="382" height="84" rx="12" fill="#02040F" stroke="#112454" stroke-width="1" />
         <g transform="translate(18, 22)">
-          <path d="M 6 -5 L 12 -2 L 12 3 C 12 7.5 6 11 6 11 C 6 11 0 7.5 0 3 L 0 -2 Z" fill="#162A7E" stroke="#B89A5A" stroke-width="1.2" transform="translate(0, 1)"/>
+          <path d="M 6 -5 L 12 -2 L 12 3 C 12 7.5 6 11 6 11 C 6 11 0 7.5 0 3 L 0 -2 Z" fill="#07122E" stroke="#38BDF8" stroke-width="1.2" transform="translate(0, 1)"/>
           <path d="M 4 3 L 5.5 4.5 L 8.5 1.5" fill="none" stroke="#E8E0D2" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round"/>
           <text x="20" y="8" class="font-sans" font-size="14" font-weight="700" fill="#E8E0D2">Security Recon</text>
         </g>
-        <text x="18" y="54" class="font-sans" font-size="11.5" fill="rgba(232,224,210,0.7)">Kali Linux, Port Analysis &amp; Ethical Exploration</text>
-        <circle cx="360" cy="42" r="14" fill="#162A7E" />
-        <circle cx="360" cy="42" r="7" fill="none" stroke="#B89A5A" stroke-width="1.1"/>
-        <line x1="360" y1="42" x2="365" y2="37" stroke="#E8E0D2" stroke-width="1.3" stroke-linecap="round"/>
+        <text x="18" y="54" class="font-sans" font-size="11.5" fill="rgba(232, 224, 210, 0.7)">Kali Linux, Port Analysis &amp; Ethical Exploration</text>
+        <circle cx="358" cy="42" r="14" fill="#07122E" stroke="#112454" stroke-width="1" />
+        <circle cx="358" cy="42" r="7" fill="none" stroke="#38BDF8" stroke-width="1.1"/>
+        <line x1="358" y1="42" x2="363" y2="37" stroke="#E8E0D2" stroke-width="1.3" stroke-linecap="round"/>
         <animate attributeName="opacity" dur="12s" repeatCount="indefinite" values="0;0;1;1;0;0;0;0" keyTimes="0;0.23;0.25;0.47;0.50;0.98;1;1" />
       </g>
+
+      <!-- 3. Lo-Fi Audio & Design -->
       <g>
-        <rect x="0" y="0" width="384" height="84" rx="12" fill="#0E1D61" stroke="rgba(232,224,210,0.14)" stroke-width="1" />
+        <rect x="0" y="0" width="382" height="84" rx="12" fill="#02040F" stroke="#112454" stroke-width="1" />
         <g transform="translate(18, 22)">
-          <path d="M 2 5 L 2 1 C 2 -3 10 -3 10 1 L 10 5" fill="none" stroke="#B89A5A" stroke-width="1.3" stroke-linecap="round"/>
+          <path d="M 2 5 L 2 1 C 2 -3 10 -3 10 1 L 10 5" fill="none" stroke="#38BDF8" stroke-width="1.3" stroke-linecap="round"/>
           <rect x="0" y="3" width="3" height="5" rx="1.5" fill="#E8E0D2"/>
           <rect x="9" y="3" width="3" height="5" rx="1.5" fill="#E8E0D2"/>
           <text x="20" y="8" class="font-sans" font-size="14" font-weight="700" fill="#E8E0D2">Lo-Fi Audio &amp; Design</text>
         </g>
-        <text x="18" y="54" class="font-sans" font-size="11.5" fill="rgba(232,224,210,0.7)">Soundscapes, Minimal Aesthetics &amp; Calm Flow</text>
-        <circle cx="360" cy="42" r="14" fill="#162A7E" />
-        <path d="M 357 44 L 357 37 L 364 35 L 364 42 M 357 41 A 2 1.5 0 1 1 355 42.5 A 2 1.5 0 0 1 357 41 M 364 39 A 2 1.5 0 1 1 362 40.5 A 2 1.5 0 0 1 364 39" fill="none" stroke="#B89A5A" stroke-width="1.2"/>
+        <text x="18" y="54" class="font-sans" font-size="11.5" fill="rgba(232, 224, 210, 0.7)">Soundscapes, Minimal Aesthetics &amp; Calm Flow</text>
+        <circle cx="358" cy="42" r="14" fill="#07122E" stroke="#112454" stroke-width="1" />
+        <path d="M 355 44 L 355 37 L 362 35 L 362 42 M 355 41 A 2 1.5 0 1 1 353 42.5 A 2 1.5 0 0 1 355 41 M 362 39 A 2 1.5 0 1 1 360 40.5 A 2 1.5 0 0 1 362 39" fill="none" stroke="#38BDF8" stroke-width="1.2"/>
         <animate attributeName="opacity" dur="12s" repeatCount="indefinite" values="0;0;1;1;0;0;0;0" keyTimes="0;0.48;0.50;0.72;0.75;0.98;1;1" />
       </g>
+
+      <!-- 4. Hardware Prototyping -->
       <g>
-        <rect x="0" y="0" width="384" height="84" rx="12" fill="#0E1D61" stroke="rgba(232,224,210,0.14)" stroke-width="1" />
+        <rect x="0" y="0" width="382" height="84" rx="12" fill="#02040F" stroke="#112454" stroke-width="1" />
         <g transform="translate(18, 22)">
-          <rect x="1" y="-3" width="10" height="10" rx="2" fill="#162A7E" stroke="#B89A5A" stroke-width="1.2"/>
+          <rect x="1" y="-3" width="10" height="10" rx="2" fill="#07122E" stroke="#38BDF8" stroke-width="1.2"/>
           <circle cx="6" cy="2" r="1.5" fill="#E8E0D2"/>
-          <line x1="3" y1="-5" x2="3" y2="-3" stroke="#B89A5A" stroke-width="1"/>
-          <line x1="6" y1="-5" x2="6" y2="-3" stroke="#B89A5A" stroke-width="1"/>
-          <line x1="9" y1="-5" x2="9" y2="-3" stroke="#B89A5A" stroke-width="1"/>
-          <line x1="3" y1="7" x2="3" y2="9" stroke="#B89A5A" stroke-width="1"/>
-          <line x1="6" y1="7" x2="6" y2="9" stroke="#B89A5A" stroke-width="1"/>
-          <line x1="9" y1="7" x2="9" y2="9" stroke="#B89A5A" stroke-width="1"/>
+          <line x1="3" y1="-5" x2="3" y2="-3" stroke="#38BDF8" stroke-width="1"/>
+          <line x1="6" y1="-5" x2="6" y2="-3" stroke="#38BDF8" stroke-width="1"/>
+          <line x1="9" y1="-5" x2="9" y2="-3" stroke="#38BDF8" stroke-width="1"/>
+          <line x1="3" y1="7" x2="3" y2="9" stroke="#38BDF8" stroke-width="1"/>
+          <line x1="6" y1="7" x2="6" y2="9" stroke="#38BDF8" stroke-width="1"/>
+          <line x1="9" y1="7" x2="9" y2="9" stroke="#38BDF8" stroke-width="1"/>
           <text x="20" y="8" class="font-sans" font-size="14" font-weight="700" fill="#E8E0D2">Hardware Prototyping</text>
         </g>
-        <text x="18" y="54" class="font-sans" font-size="11.5" fill="rgba(232,224,210,0.7)">Arduino, Assistive Gloves &amp; Sensor Fusion</text>
-        <circle cx="360" cy="42" r="14" fill="#162A7E" />
-        <circle cx="360" cy="42" r="6" fill="none" stroke="#B89A5A" stroke-width="1.5" stroke-dasharray="3,2"/>
-        <circle cx="360" cy="42" r="2.5" fill="#B89A5A"/>
+        <text x="18" y="54" class="font-sans" font-size="11.5" fill="rgba(232, 224, 210, 0.7)">Arduino, Assistive Gloves &amp; Sensor Fusion</text>
+        <circle cx="358" cy="42" r="14" fill="#07122E" stroke="#112454" stroke-width="1" />
+        <circle cx="358" cy="42" r="6" fill="none" stroke="#38BDF8" stroke-width="1.5" stroke-dasharray="3,2"/>
+        <circle cx="358" cy="42" r="2.5" fill="#38BDF8"/>
         <animate attributeName="opacity" dur="12s" repeatCount="indefinite" values="0;0;1;1;0;0;0;0" keyTimes="0;0.73;0.75;0.97;0.98;1;1;1" />
       </g>
     </g>
 
     <!-- Daily Focus Rings Section -->
     <g transform="translate(24, 182)">
-      <rect x="0" y="0" width="384" height="188" rx="12" fill="#0E1D61" stroke="rgba(232,224,210,0.14)" stroke-width="1" />
+      <rect x="0" y="0" width="382" height="188" rx="12" fill="#02040F" stroke="#112454" stroke-width="1" />
 
       <!-- Concentric Rings on Left -->
       <g transform="translate(74, 94)">
-        <circle cx="0" cy="0" r="42" fill="none" stroke="#162A7E" stroke-width="7" />
-        <circle cx="0" cy="0" r="42" fill="none" stroke="url(#ring-ivory)" stroke-width="7"
+        <circle cx="0" cy="0" r="42" fill="none" stroke="#07122E" stroke-width="7" />
+        <circle cx="0" cy="0" r="42" fill="none" stroke="url(#ring-blue)" stroke-width="7"
                 stroke-linecap="round" stroke-dasharray="264" class="ring-anim-1"
                 transform="rotate(-90)" />
 
-        <circle cx="0" cy="0" r="30" fill="none" stroke="#162A7E" stroke-width="7" />
-        <circle cx="0" cy="0" r="30" fill="none" stroke="url(#ring-gold)" stroke-width="7"
+        <circle cx="0" cy="0" r="30" fill="none" stroke="#07122E" stroke-width="7" />
+        <circle cx="0" cy="0" r="30" fill="none" stroke="url(#ring-sapphire)" stroke-width="7"
                 stroke-linecap="round" stroke-dasharray="188" class="ring-anim-2"
                 transform="rotate(-90)" />
 
-        <circle cx="0" cy="0" r="18" fill="none" stroke="#162A7E" stroke-width="7" />
-        <circle cx="0" cy="0" r="18" fill="none" stroke="url(#ring-ivory-muted)" stroke-width="7"
+        <circle cx="0" cy="0" r="18" fill="none" stroke="#07122E" stroke-width="7" />
+        <circle cx="0" cy="0" r="18" fill="none" stroke="url(#ring-ivory)" stroke-width="7"
                 stroke-linecap="round" stroke-dasharray="113" class="ring-anim-3"
                 transform="rotate(-90)" />
       </g>
 
       <!-- Rings Legend -->
       <g transform="translate(142, 22)">
-        <text x="0" y="10" class="font-mono" font-size="10" font-weight="700" fill="#B89A5A" letter-spacing="1">DAILY FOCUS RINGS</text>
+        <text x="0" y="10" class="font-mono" font-size="10" font-weight="700" fill="#38BDF8" letter-spacing="1">DAILY FOCUS RINGS</text>
 
         <g transform="translate(0, 24)">
-          <circle cx="5" cy="0" r="4" fill="#E8E0D2" />
+          <circle cx="5" cy="0" r="4" fill="#38BDF8" />
           <text x="16" y="4" class="font-sans" font-size="11" font-weight="700" fill="#E8E0D2">Code &amp; Architecture</text>
-          <text x="170" y="4" class="font-mono" font-size="10" font-weight="700" fill="#E8E0D2">92%</text>
+          <text x="170" y="4" class="font-mono" font-size="10" font-weight="700" fill="#38BDF8">92%</text>
         </g>
 
         <g transform="translate(0, 48)">
-          <circle cx="5" cy="0" r="4" fill="#B89A5A" />
+          <circle cx="5" cy="0" r="4" fill="#7F95FF" />
           <text x="16" y="4" class="font-sans" font-size="11" font-weight="700" fill="#E8E0D2">Research &amp; Security</text>
-          <text x="170" y="4" class="font-mono" font-size="10" font-weight="700" fill="#B89A5A">86%</text>
+          <text x="170" y="4" class="font-mono" font-size="10" font-weight="700" fill="#7F95FF">86%</text>
         </g>
 
         <g transform="translate(0, 72)">
-          <circle cx="5" cy="0" r="4" fill="rgba(232,224,210,0.6)" />
+          <circle cx="5" cy="0" r="4" fill="#E8E0D2" />
           <text x="16" y="4" class="font-sans" font-size="11" font-weight="700" fill="#E8E0D2">Modern Web Craft</text>
           <text x="170" y="4" class="font-mono" font-size="10" font-weight="700" fill="#E8E0D2">95%</text>
         </g>
 
         <g transform="translate(0, 102)">
-          <rect x="0" y="0" width="194" height="22" rx="6" fill="#162A7E" stroke="rgba(232,224,210,0.14)" stroke-width="0.8" />
-          <text x="8" y="15" class="font-mono" font-size="9" fill="rgba(232,224,210,0.7)">GOAL: RELENTLESS MASTERY</text>
+          <rect x="0" y="0" width="194" height="22" rx="6" fill="#07122E" stroke="#112454" stroke-width="0.8" />
+          <text x="8" y="15" class="font-mono" font-size="9" fill="rgba(232, 224, 210, 0.7)">GOAL: RELENTLESS MASTERY</text>
         </g>
       </g>
     </g>

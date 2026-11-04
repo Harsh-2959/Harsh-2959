@@ -2,28 +2,28 @@
 
   <!-- 1. HERO BANNER: Violet Waving + Viewfinder + Signature in Atlas Navy, Ivory & Gold -->
   <a href="https://github.com/Harsh-2959">
-    <img src="./hero.svg?v=10" alt="Harsh Nilesh Patil - Hero Banner" width="100%" />
+    <img src="./hero.svg?v=16" alt="Harsh Nilesh Patil - Hero Banner" width="100%" />
   </a>
 
   <br/><br/>
 
   <!-- 2. ABOUT & LIFE: Violet Typing Browser + Hobbies Carousel + Daily Focus Rings -->
-  <img src="./about-life.svg?v=10" alt="About &amp; Daily Focus - Harsh Nilesh Patil" width="100%" />
+  <img src="./about-life.svg?v=16" alt="About &amp; Daily Focus - Harsh Nilesh Patil" width="100%" />
 
   <br/><br/>
 
   <!-- 3. ROYAL SCENE: The Queen on Throne & Antler Girl with Kitten (Gaming Avatars) -->
-  <img src="./royal-scene.svg?v=10" alt="Beyond the Code - The Queen and Antler Girl" width="100%" />
+  <img src="./royal-scene.svg?v=16" alt="Beyond the Code - The Queen and Antler Girl" width="100%" />
 
   <br/><br/>
 
   <!-- 4. TECH ORBIT: Planetary Tech Orbit & Grouped Chip Grid -->
-  <img src="./stack.svg?v=10" alt="Tech Orbit &amp; Stack - Harsh Nilesh Patil" width="100%" />
+  <img src="./stack.svg?v=16" alt="Tech Orbit &amp; Stack - Harsh Nilesh Patil" width="100%" />
 
   <br/><br/>
 
   <!-- 5. ID BADGE & DASHBOARD: Swinging Lanyard + Academic KPIs + Radar -->
-  <img src="./id-dashboard.svg?v=10" alt="ID Badge &amp; Velocity Dashboard" width="100%" />
+  <img src="./id-dashboard.svg?v=16" alt="ID Badge &amp; Velocity Dashboard" width="100%" />
 
   <br/><br/>
 
@@ -52,7 +52,7 @@
 
   <!-- 7. CONNECT FOOTER: Character + Neon Sign + Social Links -->
   <a href="https://linkedin.com/in/harshpatil2959" target="_blank" rel="noopener noreferrer">
-    <img src="./connect.svg?v=10" alt="Connect with Harsh Nilesh Patil" width="100%" />
+    <img src="./connect.svg?v=16" alt="Connect with Harsh Nilesh Patil" width="100%" />
   </a>
 
   <br/><br/>
